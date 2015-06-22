@@ -1,7 +1,7 @@
 # store the current directory
 initial.dir<-getwd()
 # change to the new directory
-setwd("C:/Users/Dave/OneDrive/Development/R/Examples")
+setwd("D:/Users/Dave/OneDrive/Development/R/Examples")
 
 counts<-read.table("Haemocyte.txt",header=TRUE)
 
