@@ -7,7 +7,7 @@ dataDirectory  <-  paste(rootdir, "Data", sep="/")
 imageDirectory <- paste(rootdir, "Images", sep="/")
 setwd(workdir)
 
-dataFile <- file.path(dataDirectory,"DownloadFestival.dat")
+dataFile <- file.path(dataDirectory,"DownloadFestivalFixedByMe.dat")
 festivalData <- read.delim(dataFile,header=TRUE)
 
 festivalHistogram <- ggplot(festivalData, aes(day1)) + theme(legend.position = "none")
