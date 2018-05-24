@@ -1,11 +1,16 @@
+library(here)
 library(ggplot2)
 
 rm(list = ls())
-rootdir <- ("c:/development/RPROJECTS/First")
+
+scriptdir <- here()
+
+rootdir <- scriptdir
 workdir <- rootdir
 dataDirectory  <-  paste(rootdir, "Data", sep="/")
 imageDirectory <- paste(rootdir, "Images", sep="/")
 setwd(workdir)
+
 
 dataFile <- file.path(dataDirectory,"DownloadFestival.dat")
 festivalData <- read.delim(dataFile,header=TRUE)

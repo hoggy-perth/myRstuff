@@ -1,13 +1,16 @@
-rm(list = ls())
-
+library(here)
 library(ggplot2)
 
-rootdir <- ("c:/development/RPROJECTS")
-workdir <- paste(rootdir, "Second - Scatterplot", sep="/")
-dataDirectory  <-  paste(rootdir, "Data", sep="/")
-imageDirectory <- paste(workdir, "Images", sep="/")
+rm(list = ls())
 
+scriptdir <- here()
+
+rootdir <- scriptdir
+workdir <- rootdir
+dataDirectory  <-  paste(rootdir, "Data", sep="/")
+imageDirectory <- paste(rootdir, "Images", sep="/")
 setwd(workdir)
+
 
 dataFile <- file.path(dataDirectory,"Exam Anxiety.dat")
 

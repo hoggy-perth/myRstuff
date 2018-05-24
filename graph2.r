@@ -1,9 +1,19 @@
-# store the current directory
-initial.dir<-getwd()
-# change to the new directory
-setwd("C:/Users/Dave/OneDrive/Development/R/Examples")
+library(here)
+library(ggplot2)
 
-counts<-read.table("Haemocyte.txt",header=TRUE)
+rm(list = ls())
+
+scriptdir <- here()
+
+rootdir <- scriptdir
+workdir <- rootdir
+dataDirectory  <-  paste(rootdir, "Data", sep="/")
+imageDirectory <- paste(rootdir, "Images", sep="/")
+setwd(workdir)
+
+dataFile <- file.path(dataDirectory,"Haemocyte.txt")
+
+counts<-read.table(dataFile,header=TRUE)
 
 attach(counts)
 
@@ -40,6 +50,3 @@ legend(0.38,
        text.font=3,
        bty="n")
 
-#set the directory back
-setwd(initial.dir)
-getwd()

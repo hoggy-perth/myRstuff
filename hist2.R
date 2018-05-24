@@ -1,7 +1,11 @@
+library(here)
 library(ggplot2)
 
 rm(list = ls())
-rootdir <- ("C:\\Code\\myRstuff")
+
+scriptdir <- here()
+
+rootdir <- scriptdir
 workdir <- rootdir
 dataDirectory  <-  paste(rootdir, "Data", sep="/")
 imageDirectory <- paste(rootdir, "Images", sep="/")
