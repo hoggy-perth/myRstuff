@@ -1,3 +1,4 @@
+#this is a cool little script
 if (!file.exists("data")) {
   dir.create("data")
 }
